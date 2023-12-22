@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber/native'
+import { useGLTF } from '@react-three/drei/native'
+import modelPath from './shoe-draco.glb'
+import Model from './src/components/Model.jsx'
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return (
+    <Canvas>
+      <ambientLight />
+      <Suspense>
+        <Model />
+      </Suspense>
+    </Canvas>
+  )
+}
