@@ -8,7 +8,7 @@ import { useGLTF } from "@react-three/drei/native";
 export default function Model(props) {
   const { nodes, materials } = useGLTF(require('../assets/model.glb'));
   return (
-    <group {...props} dispose={null}>
+<group {...props} dispose={null} scale={7} position={[0, -1,0]}>
       <mesh
         geometry={nodes.pasted__model1.geometry}
         material={materials.koltuk}

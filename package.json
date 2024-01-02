@@ -15,6 +15,7 @@
     "expo": "^49.0.0",
     "expo-gl": "~13.0.1",
     "expo-status-bar": "~1.6.0",
+    "r3f-native-orbitcontrols": "^1.0.9",
     "react": "18.2.0",
     "react-native": "0.72.6",
     "three": "^0.160.0"
